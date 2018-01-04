@@ -22,3 +22,25 @@ learn basic react
   );
 </script>
 ```
+
+## React的渲染方式
+![react渲染方式](https://i.imgur.com/f48ariI.png)
+![将不再有啥](https://i.imgur.com/UqBVbfZ.png)
+![好处](https://i.imgur.com/xpHpreo.png)
+
+>一个React组件可以理解成一个独立的函数。
+>*接受参数（props）*，*可复用*，*可以传递*，*返回结果（渲染组件）*
+
+## 虚拟DOM树
+>JavaScript虽快，但是做一些DOM操作却相当慢。
+
+##### react处理方式(在每一次更新时...)
+- React重建DOM树
+- 找到与上个版本的DOM的差异
+- 计算出最新的DOM更新操作
+- 从操作队列中批量地执行DOM更新操作
+
+##### react可以在Node.js中运行（服务器端）
+- 服务器与客服端共用逻辑（Isomorphic javascript）
+- SEO友好，便于生成缓存的单页应用
+- 直接渲染特定的页面而不用渲染整个app
