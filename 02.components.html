@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>学习React！！</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/JSXTransformer.js"></script>
+		<script type="text/jsx">
+		// 如果我们需要向组件传递参数，可以使用 this.props 对象
+			var WebSite = React.createClass({
+		  	render: function() {
+			    return (
+			      <div>
+			        <Name name={this.props.name} />
+			        <Link site={this.props.site} />
+			      </div>
+			    );
+			  }
+			});
+			 
+			var Name = React.createClass({
+			  render: function() {
+			    return (
+			      <h1>{this.props.name}</h1>
+			    );
+			  }
+			});
+			 
+			var Link = React.createClass({
+			  render: function() {
+			    return (
+			      <a href={this.props.site}>
+			        {this.props.site}
+			      </a>
+			    );
+			  }
+			});
+			 
+			React.render(
+			  <WebSite name="React 基础" site=" https://github.com/FinGet/ReactLearn" />,
+			  document.getElementById('app')
+			);
+		</script>
+</body>
+</html>

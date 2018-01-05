@@ -8,11 +8,17 @@
     <script src="bower_components/react/react.js"></script>
     <script src="bower_components/react/JSXTransformer.js"></script>
 	<script type="text/jsx">
+		 /*
+			 React.createClass 方法用于生成一个组件类
+			 注意，原生 HTML 元素名以小写字母开头，而自定义的 React 类名以大写字母开头，比如 MessageBox 不能写成 messageBox。
+			 除此之外还需要注意组件类只能包含一个顶层标签，否则也会报错。
+			*/
 		var MessageBox = React.createClass({
 			alertMe: function(){
 				alert('你刚才点了我一下。。。。');
 			},
 			render:function(){
+				// 我们可以在 JSX 中使用 JavaScript 表达式。表达式写在花括号 {} 中
 				return ( <h1 onClick={this.alertMe}>你好React！！！</h1> )
 			}
 		});
