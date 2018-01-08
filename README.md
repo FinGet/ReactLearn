@@ -42,6 +42,7 @@ learn basic react
 ## 虚拟DOM树
 >JavaScript虽快，但是做一些DOM操作却相当慢。
 
+![](https://i.imgur.com/LK3j3G4.png)
 ##### react处理方式(在每一次更新时...)
 - React重建DOM树
 - 找到与上个版本的DOM的差异
